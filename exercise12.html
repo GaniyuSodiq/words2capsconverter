@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercise 12</title>
+</head>
+<body>
+
+    <p>Give us a string of any case.</p>
+    <input id="word-input" type="text"  /> <br> <br>
+    <button onclick="upperCase()">see UPPERCASE</button>
+    <div id="upper-words"></div>
+    <script>
+
+        let wordsArray = [];
+
+        function upperCase(){
+            let wordInput = document.getElementById('word-input');
+            let wordText = wordInput.value;
+            wordsArray.push(wordText);
+            render();
+        }
+
+        function render(){
+            let upperWord = document.getElementById('upper-words').innerHTML = ' ';
+            wordsArray.forEach(function(word){
+                let theWord = word.toUpperCase(); 
+                let newText = document.createElement('div');
+                newText.innerText = theWord;
+                let upperWord = document.getElementById('upper-words');
+                upperWord.appendChild(newText);    
+            })
+        }
+    </script>
+</body>
+</html>

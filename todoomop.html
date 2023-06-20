@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Todo OmoP</title>
+</head>
+<body>
+
+    <!-- HTML -->
+    <h1>Shopping Cart</h1>
+    
+    <button id="apple" onclick="apple()">Apple</button>
+    <button id="tomatoe" onclick="tomatoe()">Tomatoe</button>
+    <button id="egg" onclick="egg()">Egg</button>
+    <button id="clear" onclick="deleteDiv()">Clear</button>
+
+    <div id="cart">
+        
+    </div>
+
+    <!-- JAVASCRIPT -->
+    <script>
+
+        function apple(){
+            // CREATE A DIV
+            let appleDiv = document.createElement('div');
+            // INSERT A TEXT INTO THE DIV
+            appleDiv.innerText = 'Apple';
+            // APPEND THE CREATED DIV INTO THE CART DIV
+            document.getElementById('cart').appendChild(appleDiv);
+        }
+        function tomatoe(){
+            let tomatoeDiv = document.createElement('div');
+            tomatoeDiv.innerText = 'Tomatoe';
+            document.getElementById('cart').appendChild(tomatoeDiv);
+        }
+        function egg(){
+            let eggDiv = document.createElement('div');
+            eggDiv.innerText = 'Egg';
+            document.getElementById('cart').appendChild(eggDiv);
+        }
+        function deleteDiv(){
+            document.getElementById('cart').innerText = '';
+        }
+    </script>
+</body>
+</html>
